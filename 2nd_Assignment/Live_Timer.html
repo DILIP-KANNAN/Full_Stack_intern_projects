@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Time and Background</title>
+  <link rel="icon" href="https://img.icons8.com/clouds/100/timer.png">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      transition: background 1s ease;
+      text-align: center;    
+      background-size: cover;
+      background-position: center;
+    }
+
+    h1 {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      font-size: 3em;
+      color:bisque;
+    }
+
+    .time {
+      font-size: 3em;
+      color:whitesmoke;
+      background-color: rgba(223, 220, 245, 0.3);
+      border-radius: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1 id="greeting">Hello!</h1>
+    <p class="time" id="time">something</p>
+  </div>
+
+  <script>
+    function formatTime(hours, minutes,seconds) {
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12; 
+      hours = hours ? hours : 12; 
+      minutes = minutes < 10 ? '0' + minutes : minutes; 
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      return `${hours}:${minutes}:${seconds} ${ampm}`;
+    }
+    
+    function setBackgroundAndTime() {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const formattedTime = formatTime(hours, minutes,seconds);
+      document.getElementById('time').innerText = formattedTime;
+
+      let bgColor, greetingText;
+      if (hours >= 5 && hours < 12) {
+        bgColor = "url('morning.jpeg')";
+        greetingText = "Good Morning!";
+      } else if (hours >= 12 && hours < 17) {
+        bgColor = "url('noon.jpg')";
+        greetingText = "Good Afternoon!";
+      } else if (hours >= 17 && hours < 20) {
+        bgColor = "url('evening.jpg')";
+        greetingText = "Good Evening!";
+      } else {
+        bgColor = "url('night.jpeg')";
+        greetingText = "Good Night!";
+      }
+      document.body.style.backgroundImage = bgColor;
+      document.getElementById("greeting").innerText = greetingText;
+    }
+    setBackgroundAndTime();
+    setInterval(setBackgroundAndTime, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOB</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://img.icons8.com/clouds/100/birthday-date.png">
+    <style>
+        body{
+            background-image: url("dob.jpeg");
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+          padding: 10px 20px;
+          color: white;
+          background-color: #007bff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="liveTime" class="live-time">Loading current time...</div>
+        <h1>Date of Birth Calculator</h1>
+        <form id="dobForm">
+          <label for="dobDate">Enter Date of Birth (Date):</label>
+          <input type="date" id="dobDate" required>
+          <label for="dobTime">Enter Time of Birth (Time):</label>
+          <input type="time" id="dobTime" required>
+          <button type="button" onclick="calculateDetails()">Calculate</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

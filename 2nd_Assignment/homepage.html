@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Timer Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://img.icons8.com/clouds/100/timer.png">
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("Bg_gif.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="text"> 
+            <h1>welcome to the site</h1>
+            <h2>Hover on the buttons below for more information</h2>    
+        </div>
+        <br>
+        <br>
+        <div class="bt-hold">
+            <div class="bt2"><button class="b" data-info="This is a age calculator page that calculates your age in years, hours, Minutes and Seconds" onclick="window.location.href='DOB.html'">DOB</button></div>
+            <div class="bt2"><button class="b" data-info="This page gives the time left for the next Newyear" onclick="window.location.href='NewYear_timer.html'">New Year</button></div>
+            <div class="bt3"><button class="b" data-info="This paage is a live timer with dynamic Background based in the time." onclick="window.location.href='Live_timer.html'">Live Timer</button></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

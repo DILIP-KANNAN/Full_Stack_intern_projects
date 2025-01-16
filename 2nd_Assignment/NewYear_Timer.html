@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Year Countdown</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://img.icons8.com/clouds/100/birthday-date.png">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background-image: url("newyear.jpeg");    
+      background-size: cover;
+      background-position: center;
+    }
+    .livetime{
+        color: rgb(53, 54, 54);
+        font-size: large;
+        color:rgb(140, 200, 255)
+    }
+  </style>
+</head>
+<body>
+  <div class="countdown-container">
+    <div id="liveTime" class="livetime">Loading current time...</div>
+    <h1>Countdown to New Year</h1>
+    <p id="countdown">Calculating...</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

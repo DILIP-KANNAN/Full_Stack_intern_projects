@@ -1,0 +1,87 @@
+.header{
+    height: 75%;
+    text-align: center;
+    text-shadow: 
+        2px 2px 0px black, 
+        -2px 2px 0px black, 
+        2px -2px 0px black,
+        -2px -2px 0px black;
+    color: white;
+}
+.bt-hold{
+    width: 600px;
+    height: 150px;
+    background-color: rgba(66, 62, 62, 0.1);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.bt1, .bt2, .bt3{
+    width: 180px;
+    justify-content: center;
+    display: flex;
+}
+.b{
+    height: 40px; width: 120px;
+    background-color: tan;
+    border-radius: 40px;
+    border: none;
+    font-size: medium;
+} 
+.expanded {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -30%);
+    border-radius: 10px;
+    height: 30%; width: 60%;
+    font-size: 24px;
+    text-align: center;
+    padding: 40px;
+  }
+  .info-box {
+    margin-top: 20px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+  }
+  .b:hover{
+    background-color: rgba(183, 248, 255, 0.8);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff91;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  .live-time {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #5facffeb;
+    font-weight: bold;
+  }
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+ .countdown-container {
+    background: rgba(0, 0, 0, 0.13);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  } 
+  .countdown-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .countdown-container p {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+  .time {
+    font-weight: bold;
+  }
