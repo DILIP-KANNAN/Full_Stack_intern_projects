@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f8f9fa;
+    flex-wrap: wrap;
+}
+
+.google-clone {
+    flex:1;
+    text-align: center;
+}
+
+.logo img {
+    margin-top: 10%;
+    width: 272px;
+}
+
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    gap: 8px;
+    background-color: whitesmoke;
+    height: 50px;
+    width: 500px;
+    border-radius: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    justify-self: center;
+    box-shadow: 5px 8px 10px 0px rgba(214,214,214,0.75);
+    transition: all 0.1s ;
+    border: 1px solid rgb(202, 202, 202);
+}
+.search-bar:hover{
+    height: 52px;
+    margin: 20px 0 18px 0;
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 10px;
+    border: 0px;
+    background-color: transparent;
+    border-radius: 20px;
+    font-size: 16px;
+    font-size: large;
+}
+.search-bar input:focus{
+    outline: none;
+    background-color: transparent;
+}
+.search-bar input:active{
+    outline: none;
+    background-color: transparent;
+}
+.buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    border-color: transparent;
+}
+
+.buttons button:hover {
+    border: 1px solid rgb(207, 206, 206);
+    margin: 6px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-between;
+ }
+ .head1{
+    display: flex;
+    column-gap: 25px;
+ }
+ .head2{
+    display: flex;
+    column-gap: 25px;
+ }
+ .header a{
+    text-decoration: none;
+    color: rgb(93, 93, 93);
+ }
+ .header a:hover{
+    text-decoration: underline;
+ }
+ .language-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #595959;
+ }
+.language-section a{
+    margin: 2px;
+    text-decoration: none;
+}
+.language-section a:hover{
+    text-decoration: underline;
+}
+.footer{
+    bottom:0;
+    background-color: #e5e2e2b6;
+    color:#4b4949;
+    height: 90px;
+    font-size: medium;
+    padding:1px 7px 7px 7px;
+} 
+.footer p{
+    padding-left: 10px;
+}
