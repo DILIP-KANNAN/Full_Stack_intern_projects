@@ -9,6 +9,7 @@ function App() {
   const [selectedTask, setSelectedTask] = useState(null);
   const [taskBeingEdited, setTaskBeingEdited] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false); 
 
   // Add a task to the list
   const addTask = (task) => {
@@ -50,8 +51,19 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${isMobileView ? "mobile-view" : ""}`}>
       <Header />
+      <div className="toggle-container">
+        <label className="switch">
+          <input
+            type="checkbox"
+            checked={isMobileView}
+            onChange={() => setIsMobileView(!isMobileView)}
+          />
+          <span className="slider"></span>
+        </label>
+        <span>{isMobileView ? "Mobile View On" : "Mobile View Off"}</span>
+      </div>
       <TaskForm
         addTask={addTask}
         task={taskBeingEdited || null}

@@ -16,8 +16,8 @@ header {
   justify-content: center;
   margin-top: 5px;
   height: 80px;
-  position: fixed;
-  top: 0px;
+  position:fixed;
+  top:0;
 }
 
 form {
@@ -46,9 +46,10 @@ button:hover {
 
 .task-list {
   display: grid;
+  width: 100vw;
   grid-template-columns: repeat(3, 300px); 
   justify-content: center;
-  top: 220px;
+  top: 280px;
   position:relative;
   transition: all 0.3s ease;
   border-top: 2px solid rgba(60, 60, 60, 0.594);
@@ -105,7 +106,7 @@ button:hover {
 }
 
 .but{
-  margin: 20px;
+  margin: 0 20px 20px 20px;
 }
 .form-container {
   max-height: 0; /* Initially hide the form by reducing height */
@@ -130,7 +131,8 @@ button:hover {
   gap: 15px; /* Add space between form elements */
   border-radius: 8px; /* Rounded corners */
   width: 300px; /* Set a fixed width for the form */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  margin: 0;
 }
 textarea {
   resize: none; 
@@ -141,7 +143,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   position: fixed;
-  top:120px;
+  top:155px;
   z-index: 10;
 }
 .task-header{
@@ -173,4 +175,80 @@ textarea {
 }
 .che input[type="checkbox" i] {
   width: 30px!important;
+}
+/* Add this to App.css */
+
+.App.mobile-view {
+  background-color: #f8f9fa; /* Optional: Change background for mobile view */
+}
+
+/* TaskList styles for mobile view */
+.App.mobile-view .task-list {
+  display: flex;
+  flex-direction: column; /* Stack tasks vertically */
+  gap: 10px;
+  align-items: center;
+}
+
+/* TaskForm styles for mobile view */
+.App.mobile-view .form-container {
+  position: relative; /* Change from fixed to relative */
+  margin: 20px auto; /* Center it */
+}
+.App.mobile-view .task-item{
+  width: 270px;
+}
+/* Toggle Switch */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+  top: 200px;
+  position: fixed;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
 }
