@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './App.css';
 import Header from './Header';
 import TaskForm from './TaskForm';
@@ -11,6 +11,10 @@ function App() {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false); 
 
+  useEffect(() => {
+    console.log("isMobileView updated:", isMobileView);
+  }, [isMobileView]);
+
   // Add a task to the list
   const addTask = (task) => {
     const newTask = {
@@ -18,6 +22,10 @@ function App() {
       id: Date.now(),
     };
     setTasks([...tasks, newTask]);
+  };
+
+  const handleToggle = () => {
+    setIsMobileView((prev) => !prev);
   };
 
   // Toggle completion status of a task
@@ -58,7 +66,7 @@ function App() {
           <input
             type="checkbox"
             checked={isMobileView}
-            onChange={() => setIsMobileView(!isMobileView)}
+            onClick={handleToggle}
           />
           <span className="slider"></span>
         </label>

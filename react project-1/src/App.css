@@ -106,7 +106,7 @@ button:hover {
 }
 
 .but{
-  margin: 0 20px 20px 20px;
+  margin: 0 20px 0px 20px;
 }
 .form-container {
   max-height: 0; /* Initially hide the form by reducing height */
@@ -143,7 +143,7 @@ textarea {
   flex-direction: column;
   align-items: center;
   position: fixed;
-  top:155px;
+  top:175px;
   z-index: 10;
 }
 .task-header{
@@ -176,13 +176,7 @@ textarea {
 .che input[type="checkbox" i] {
   width: 30px!important;
 }
-/* Add this to App.css */
 
-.App.mobile-view {
-  background-color: #f8f9fa; /* Optional: Change background for mobile view */
-}
-
-/* TaskList styles for mobile view */
 .App.mobile-view .task-list {
   display: flex;
   flex-direction: column; /* Stack tasks vertically */
@@ -190,11 +184,6 @@ textarea {
   align-items: center;
 }
 
-/* TaskForm styles for mobile view */
-.App.mobile-view .form-container {
-  position: relative; /* Change from fixed to relative */
-  margin: 20px auto; /* Center it */
-}
 .App.mobile-view .task-item{
   width: 270px;
 }
@@ -204,8 +193,9 @@ textarea {
   align-items: center;
   gap: 10px;
   margin: 20px;
-  top: 200px;
+  margin-top: 40px;
   position: fixed;
+  top: 100px;
 }
 
 .switch {
