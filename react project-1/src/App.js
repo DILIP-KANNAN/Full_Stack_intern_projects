@@ -5,11 +5,15 @@ import TaskForm from './TaskForm';
 import TaskList from './TaskList';
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(localStorage.getItem("ToDo")? JSON.parse(localStorage.getItem("ToDo")):[]);
   const [selectedTask, setSelectedTask] = useState(null);
   const [taskBeingEdited, setTaskBeingEdited] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false); 
+
+  useEffect(()=>{
+    localStorage.setItem("ToDo", JSON.stringify(tasks));
+  }, [tasks]);
 
   useEffect(() => {
     console.log("isMobileView updated:", isMobileView);
@@ -47,13 +51,6 @@ function App() {
     const updatedTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(updatedTasks); 
   };
-
-  // Show task details in the center of the page
-  // const showTaskDetails = (task) => {
-  //   setSelectedTask(task);
-  // };
-
-  // Hide task details
   const hideTaskDetails = () => {
     setSelectedTask(null);
   };
