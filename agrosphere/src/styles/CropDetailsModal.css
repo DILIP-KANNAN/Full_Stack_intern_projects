@@ -1,0 +1,134 @@
+/* Modal Overlay (Background Blur) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Content Box */
+  .modal-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    max-height: 520px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Crop Image */
+  .crop-image {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Seller List */
+  .seller-list {
+    margin-top: 20px;
+    text-align: left;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Each Seller Item */
+  .seller-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    width: 170px;
+    height: 140px;
+    justify-content: center;
+  }
+  /* Seller Info */
+  .seller-info  {
+    text-align: center;
+  }
+
+  .seller-info h4,h3{
+    margin: 0;
+  }
+  
+  .seller-info p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  /* Add to Cart Button */
+  .seller-info button {
+    background: #3cab3a;
+    color: white;
+    border: none;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .seler-image{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+
+  .seller-info button:hover {
+    background: #21981f;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin: 5px 0;
+  }
+  
+  .quantity-controls button {
+    background: #8b5e3c;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    height: 15px;
+    align-items: center;
+  } 
+  .quantity-controls button:hover{
+    background: #5c381c;
+  }
+  .seller-item {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .seller-item:hover {
+    transform: rotateZ(1deg) scale(1.02);
+    box-shadow: 0 10px 20px rgba(254, 219, 80, 0.4);
+  }
+  

@@ -1,0 +1,147 @@
+.product-card {
+    border: 1px solid #8b5e3c;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    width: 200px;
+    height: 290px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    align-content: center;
+    min-width: 200px;
+  }
+
+  .post{
+    margin: 10px;
+  }
+  
+  .product-card img {
+    width: 170px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    border: 1px solid black;
+    overflow-y: auto;
+  }
+  
+  .product-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: #8b5e3c;
+  }
+  
+  .product-card button {
+    background-color: #3cab3a;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .product-card button:hover {
+    background-color: #21981f;
+  }
+  .product-row {
+    padding: 20px;
+    background-color: #f5e1c0;
+    border-radius: 8px;
+    margin: 10px 40px;
+    height: 370px;
+    margin-bottom: 30px;
+  }
+  
+  .product-row h1 {
+    margin-bottom: 10px;
+    color: #8b5e3c;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  .seller-row {
+    padding: 20px;
+    background-color: #f5e1c0;
+    border-radius: 8px;
+    margin: 10px 40px;
+  }
+  
+  .seller-row h1 {
+    margin-bottom: 10px;
+    color: #8b5e3c;
+  }
+  
+  .seller-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    overflow-x: scroll;
+    padding: 10px;
+  }
+  .seller-card {
+    border: 1px solid #8b5e3c;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .seller-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .seller-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .seller-card p {
+    font-size: 14px;
+    color: #8b5e3c;
+  }
+  
+  .seller-card button {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .seller-card button:hover {
+    background-color: #6a422b;
+  }
+  
+  .product-card, .seller-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .product-card:hover, .seller-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(254, 219, 80, 0.7);
+  }
+  
+  .product-card:hover {
+    transform: rotateZ(2deg) scale(1.04);
+  }
