@@ -1,0 +1,72 @@
+.weather-box {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .weather-box-1{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Media Query for screens below 360px */
+  @media (max-width: 360px) {
+    .weather-box {
+      height: 90px; /* Reduce height */
+      font-size: 14px; /* Decrease font size */
+      padding: 8px; /* Reduce padding */
+    }
+
+    .input-group{
+        scale:0.87;
+        margin-bottom: 0;
+    }
+
+    .cont{
+        margin: 0;
+        scale: 0.7;
+        display: flex;
+        align-self: center;
+        gap: 20px;
+        width: 100vw;
+    }
+
+    .det{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .con{
+        padding-top: 0;
+        height: 300px !important;
+    }
+}
+@media (max-width: 320px){
+    .cont{
+        scale: 0.65;
+    }
+}
+
+@media (min-width: 360px){
+    .det{
+        margin-left: 20px;
+    }
+    .con{
+        margin-top: 20px;
+    }
+    H1{
+        margin-left: 12px;
+    }
+}
+
+.deta{
+    flex-wrap: nowrap !important;
+    gap: 15px;
+    overflow-x: auto !important;
+    padding-left: 30px;
+}
